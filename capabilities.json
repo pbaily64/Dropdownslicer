@@ -1,0 +1,95 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "Slicer values (display)",
+            "displayNameKey": "SlicerValues",
+            "name": "slicerValues",
+            "kind": "GroupingOrMeasure",
+            "description": "Field used to POPULATE the dropdown (labels displayed to the user). Must come from a multilingual table that is already filtered by the current language through a relationship in the model."
+        }
+    ],
+    "objects": {
+        "general": {
+            "properties": {
+                "filter": {
+                    "type": { "filter": {} }
+                }
+            }
+        },
+        "header": {
+            "displayName": "Label",
+            "properties": {
+                "show":            { "displayName": "Show label",              "type": { "bool": true } },
+                "titleText":       { "displayName": "Label text",              "type": { "text": true } },
+                "fontColor":       { "displayName": "Color text",              "type": { "fill": { "solid": { "color": true } } } },
+                "backgroundColor": { "displayName": "Background color",        "type": { "fill": { "solid": { "color": true } } } },
+                "fontSize":        { "displayName": "Font size",               "type": { "formatting": { "fontSize": true } } },
+                "fontBold":        { "displayName": "Bold",                    "type": { "bool": true } },
+                "paddingH":        { "displayName": "Horizontal padding (px)", "type": { "numeric": true } }
+            }
+        },
+        "dropdown": {
+            "displayName": "Dropdown",
+            "properties": {
+                "backgroundColor": { "displayName": "Background color",   "type": { "fill": { "solid": { "color": true } } } },
+                "borderColor":     { "displayName": "Border color","type": { "fill": { "solid": { "color": true } } } },
+                "fontColor":       { "displayName": "Font color",  "type": { "fill": { "solid": { "color": true } } } },
+                "fontSize":        { "displayName": "Font size",  "type": { "formatting": { "fontSize": true } } },
+                "placeholderText": { "displayName": "Default text",  "type": { "text": true } }
+            }
+        },
+        "filtering": {
+            "displayName": "Filtering",
+            "properties": {
+                "targetTable": {
+                    "displayName": "Target table",
+                    "description": "The EXACT name of the table to be filtered. Leave blank to filter the table in the 'Slicer Values' field.",
+                    "type": { "text": true }
+                },
+                "targetColumnFR": {
+                    "displayName": "Target column — FR",
+                    "description": "Column to filter when the active language is FR.",
+                    "type": { "text": true }
+                },
+                "targetColumnNL": {
+                    "displayName": "Target column — NL",
+                    "description": "Column to filter when the active language is NL.",
+                    "type": { "text": true }
+                },
+                "targetColumnEN": {
+                    "displayName": "Target column — EN",
+                    "description": "Column to filter when the active language is EN.",
+                    "type": { "text": true }
+                },
+                "activeLanguage": {
+                    "displayName": "Active language",
+                    "description": "Active language code (FR, NL, EN). Plug in your DAX tongue measurement via the fx button.",
+                    "type": { "text": true }
+                },
+                "debugMode": {
+                    "displayName": "Debug mode (console F12)",
+                    "description": "Displays in the browser console (F12) the resolved language and the target of the emitted filter.",
+                    "type": { "bool": true }
+                }
+            }
+        }
+    },
+    "dataViewMappings": [
+        {
+            "conditions": [
+                {
+                    "slicerValues": { "max": 1 }
+                }
+            ],
+            "categorical": {
+                "categories": {
+                    "for": { "in": "slicerValues" },
+                    "dataReductionAlgorithm": { "top": { "count": 10000 } }
+                }
+            }
+        }
+    ],
+    "supportsHighlight": false,
+    "supportsSynchronizingFilterState": true,
+    "privileges": []
+}
