@@ -4,12 +4,12 @@
     "displayName": "DropdownSlicer",
     "guid": "dropdownSlicerD845CCC7326D4A259FE283D20B4BD5B0",
     "visualClassName": "Visual",
-    "version": "2.2.1.0",
+    "version": "2.2.2.0",
     "description": "Multilingual Dropdown Slicer: populated via a viewtable, filters an actual source column based on the current language.",
     "supportUrl": "https://powerbi.microsoft.com",
     "gitHubUrl": "https://github.com"
   },
-  "apiVersion": "5.3.0",
+  "apiVersion": "5.11.0",
   "author": {
     "name": "Baily Patrick",
     "email": "patrick.baily@nn.be"
