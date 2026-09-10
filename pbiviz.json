@@ -7,7 +7,7 @@
     "version": "2.2.2.0",
     "description": "Multilingual Dropdown Slicer: populated via a viewtable, filters an actual source column based on the current language.",
     "supportUrl": "https://powerbi.microsoft.com",
-    "gitHubUrl": "https://github.com"
+    "gitHubUrl": "https://github.com/pbaily64/Dropdownslicer"
   },
   "apiVersion": "5.11.0",
   "author": {

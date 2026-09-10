@@ -1,21 +1,20 @@
 {
-  "name": "visual",
-  "description": "DropdownSlicer multilingue avec cible de filtrage configurable",
+  "name": "dropdown-slicer",
+  "description": "Power BI custom visual - multilingual dropdown slicer with a configurable filter target",
   "version": "2.2.2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com"
+    "url": "https://github.com/pbaily64/Dropdownslicer.git"
   },
   "license": "MIT",
   "scripts": {
     "pbiviz": "pbiviz",
     "start": "pbiviz start",
     "package": "pbiviz package && powershell -ExecutionPolicy Bypass -File ./scripts/del_move.ps1",
-    "lint": "npx eslint ."
+    "lint": "npx eslint .",
+    "eslint": "npx eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "@types/d3": "7.4.3",
-    "d3": "7.9.0",
     "powerbi-visuals-api": "^5.11.0",
     "powerbi-visuals-utils-formattingmodel": "^6.2.2"
   },
